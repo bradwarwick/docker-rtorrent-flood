@@ -12,6 +12,8 @@ ENV UID=991 GID=991 \
     DISABLE_AUTH=false \
     RTORRENT_SOCK=true \
     PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+    GLOBAL_THROTTLE_RATE_DOWN=0
+    GLOBAL_THROTTLE_RATE_UP=0
 
 RUN NB_CORES=${BUILD_CORES-`getconf _NPROCESSORS_CONF`} \
  && apk -U upgrade \
